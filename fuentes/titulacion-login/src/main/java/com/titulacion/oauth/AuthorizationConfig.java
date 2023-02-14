@@ -30,18 +30,25 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 		clients.inMemory()
 		.withClient("clienteId")
-		.secret(new BCryptPasswordEncoder().encode("clienteContraseña"))
+		.secret(new BCryptPasswordEncoder().encode("clienteContrasenia"))
+		//.secret("clienteContrasenia")
 		.authorizedGrantTypes("password", "authorization_code", "refresh_token", "implicit") // Roles del token
 		.scopes("read", "write", "trust") //Aqui se define para que van a servir los tokens (Leer, Escribir, Invitado)
+		//.redirectUris("http://localhost:8080/callback")
 		.accessTokenValiditySeconds(3600) //Tiempo de vida del token
 		.refreshTokenValiditySeconds(7200); //Tiempo de vida del tokenRefresh
+		
 		
 	}
 
 	@Override //Permitir guardar el token generado previamente en el tokenStore para usarlo mas adelante
 	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+		  //String prefix = server.getServletPrefix();
+
+		//endpoints.prefix("/api");
 		endpoints.tokenStore(store)
-		.authenticationManager(manager);
+		.authenticationManager(manager)
+		.pathMapping("/oauth/token", "/api/token");
 	}
 	
 }

@@ -51,7 +51,6 @@ public class UsuarioServiceImpl implements UsuarioService{
 
 	@Override
 	public <T> List<T> listarUsuariosPorUsuarioCorreo(String usuarioCorreo, Class<T> clase) throws Exception {
-		
 		return  usuarioRepository.listarUsuariosPorUsuarioCorreo(usuarioCorreo,clase);
 	}
 

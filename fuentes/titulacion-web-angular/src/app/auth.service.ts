@@ -11,11 +11,11 @@ export class AuthService {
   constructor(private http: Http) { }
 
   login(usercreds: any){
-    //var headers = new Headers();
-    var headers = new HttpHeaders({ 'Content-Type' :'application/json'})
-      var creds = 'name' + usercreds.username + '&password=' +usercreds.password;
+    var headers = new Headers();
+    //var headers = new HttpHeaders({ 'Content-Type' :'application/json'})
+    var creds = 'name' + usercreds.username + '&password=' +usercreds.password;
       
-      //headers.append('Content-Type', 'application/X-www-urlencoded');
+      headers.append('Content-Type', 'application/X-www-urlencoded');
       return new Promise((resolve) => {
       this.http.post('http://localhost:8080/authenticate', creds, {headers: headers}).subscribe((data) => {
         if(data.json().success) {

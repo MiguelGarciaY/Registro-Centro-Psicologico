@@ -23,7 +23,7 @@ import com.titulacion.type.TipoRespuestaWeb;
 import com.titulacion.bean.*;
 
 @RestController
-@RequestMapping(value = "/usuario")
+@RequestMapping(value = "/api/usuario")
 public class UsuarioController {
 	Logger LOGGER = LoggerFactory.getLogger(UsuarioController.class);
 	

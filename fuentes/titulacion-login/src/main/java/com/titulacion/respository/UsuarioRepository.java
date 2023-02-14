@@ -7,10 +7,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import com.titulacion.dto.UsuarioDtoResponse;
 import com.titulacion.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, String>{
 	@Query(value = "SELECT usuario_correo, usuario_clave FROM usuario WHERE usuario_correo = :usuario_correo", nativeQuery=true)
 	<T> List<T> listarUsuariosPorUsuarioCorreo(@Param("usuario_correo") String usuarioCorreo, Class<T> clase)throws Exception;
+	
+	@Query(value = "SELECT * FROM usuario WHERE usuario_correo = :usuarioCorreo", nativeQuery=true)
+	Usuario buscarUsuarioPorUsuarioCorreo(@Param("usuarioCorreo") String usuarioCorreo)throws Exception;
 }
