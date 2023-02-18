@@ -14,8 +14,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  obtenerToken(form:NgForm){
-    const email = form.value.txtemail;
+  validarUsuario(form:NgForm){
+    const email = form.value.txtUsuario;
     const password = form.value.txtpassword;
     this.loginDataService.obtenerToken(email,password)
   }

@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { TokenInterface } from './models/token';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginDataService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private router: Router ,private httpClient: HttpClient) { }
   
   obtenerToken(user:any, password:any){       
     const clientIdAndSecret = btoa('clienteId:clienteContrasenia');
@@ -31,9 +32,9 @@ export class LoginDataService {
     (
       (responses) => {
         const token = responses['access_token'];
-        console.log("Se han guardado los registros :"),
-        console.log( responses)        
+        console.log("Se han guardado los registros :");
         localStorage.setItem('access_token', token);
+        this.router.navigate(['/'])
       } ,
       error=>console.log("Error :"+ error)     
     );

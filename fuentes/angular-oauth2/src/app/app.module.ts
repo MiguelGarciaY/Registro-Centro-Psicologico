@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { NavbarHeaderComponent } from './compartido/navbar-header/navbar-header.component';
+import { VisorAdministrativoComponent } from './visor-administrativo/visor-administrativo.component';
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponentComponent},
@@ -20,7 +22,9 @@ const appRoutes:Routes=[
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    NavbarHeaderComponent,
+    VisorAdministrativoComponent
   ],
   imports: [
     BrowserModule,
