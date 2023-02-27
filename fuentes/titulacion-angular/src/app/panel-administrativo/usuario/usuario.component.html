@@ -1,0 +1,48 @@
+<div class="container-fluid page cuerpo">
+  <div class="d-flex page__box p-3 mt-2">Usuario</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data position-absolute text-center">
+      <div class="container">
+        <table width="100%" #miTabla datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+          class="table row-border hover fade success" (window:resize)="onResize()" [class.show]="showTable==true">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Contraseña</th>
+              <th>Activo</th>
+              
+              <th>prueba</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let usuario of data">
+              <td>{{usuario.correo}}</td>
+              <td>{{usuario.clave}}</td>
+
+              <td>
+                <div class="container">
+                  <label class="switch">
+                    <input type="checkbox" class="input checkbox-column" [(ngModel)]="usuario.activo" name="chkActivo" >
+                    <div class="rail">
+                      <span class="circle"></span>
+                    </div>
+                  </label>
+                </div>
+              </td>
+              
+              <td><input type="checkbox" class="input" name="myChk" [(ngModel)]="isChk" (click)="prueba()"></td>
+              <td>
+                <div>
+                  <ul class="action-list">
+                    <li>Actualizar</li>
+                    <li>Cambiar estado</li>
+                  </ul>
+                </div>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

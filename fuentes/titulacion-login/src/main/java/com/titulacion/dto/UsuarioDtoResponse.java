@@ -8,4 +8,5 @@ import lombok.Setter;
 public class UsuarioDtoResponse {
 	private String correo;
 	private String clave;
+	private boolean activo;
 }

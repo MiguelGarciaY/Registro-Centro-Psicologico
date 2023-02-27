@@ -1,0 +1,23 @@
+CREATE DATABASE titulacion2;
+
+CREATE TABLE `titulacion2`.`rol` (
+  `rol_id` INT NOT NULL,
+  `activo` BIT NULL,
+  `nombre` VARCHAR(45) NULL,
+  `descripcion` VARCHAR(280) NULL,
+  `permisos` JSON NULL,
+  PRIMARY KEY (`rol_id`));
+
+
+
+CREATE TABLE `titulacion2`.`usuario` (
+  `usuario_id` VARCHAR(20) NOT NULL,
+  `activo` BIT NOT NULL,
+  `usuario_nombre` VARCHAR(20) NULL,
+  `usuario_apellido_paterno` VARCHAR(20) NULL,
+  `usuario_apellido_materno` VARCHAR(20) NULL,
+  `usuario_nombre_completo` VARCHAR(60) NULL,
+  `correo_electronico` VARCHAR(45) NULL,
+  `telefono` VARCHAR(15) NULL,
+  `clave` VARCHAR(60) NULL,
+  PRIMARY KEY (`usuario_id`));

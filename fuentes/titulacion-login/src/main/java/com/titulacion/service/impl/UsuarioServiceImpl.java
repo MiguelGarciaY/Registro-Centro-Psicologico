@@ -43,6 +43,7 @@ public class UsuarioServiceImpl implements UsuarioService{
 			usuarioDto = new UsuarioDtoResponse();
 			usuarioDto.setCorreo(usuario.getUsuarioCorreo());
 			usuarioDto.setClave(usuario.getUsuarioClave());
+			usuarioDto.setActivo(usuario.isActivo());
 			listUsuariosDto.add(usuarioDto);
 		}
 		

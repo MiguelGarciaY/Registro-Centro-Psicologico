@@ -1,1 +1,21 @@
-<p>login works!</p>
+
+<div class="containers">
+    <div class="image-container">
+        <img src="assets/img/fondo-inicio-sesion.jpg" alt="Fondo de inicio de sesión">
+    </div>
+
+    <div class="login-container">
+        <div class="logo-container">
+            <img src="assets/img/logo.png" alt="Logo de mi sitio web">
+        </div>
+        <form #miFormulario="ngForm" (ngSubmit)="validarUsuario(miFormulario)">
+            <label for="txtUsuario">Usuario:</label>
+            <input type="text" id="txtUsuario" name="txtUsuario" placeholder="Usuario" ngModel>
+
+            <label for="txtpassword">Contraseña:</label>
+            <input type="password" id="txtpassword" name="txtpassword" placeholder="Contraseña" ngModel>
+
+            <input type="submit" value="Iniciar sesión">
+        </form>
+    </div>
+</div>

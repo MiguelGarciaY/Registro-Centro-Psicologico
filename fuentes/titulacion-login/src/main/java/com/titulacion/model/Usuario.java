@@ -19,4 +19,5 @@ public class Usuario {
 	private String usuarioCorreo;
 	private String usuarioClave;
 	private String usuarioRol;
+	private boolean activo;
 }

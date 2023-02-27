@@ -15,6 +15,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { PruebaComponent } from './prueba/prueba.component';
+import { PanelAdministrativoComponent } from './panel-administrativo/panel-administrativo.component';
+import { UsuarioComponent } from './panel-administrativo/usuario/usuario.component';
+import { DataTablesModule } from "angular-datatables";
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -24,10 +31,15 @@ import { LoginComponent } from './login/login.component';
     DashboardComponent,
     SidenavComponent,
     LoginComponent,
+    PruebaComponent,
+    PanelAdministrativoComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
     // * MATERIAL IMPORTS
     MatSidenavModule,
@@ -36,6 +48,8 @@ import { LoginComponent } from './login/login.component';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    DataTablesModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

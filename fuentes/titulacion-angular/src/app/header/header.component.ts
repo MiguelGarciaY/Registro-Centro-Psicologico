@@ -16,4 +16,9 @@ export class HeaderComponent implements OnInit {
   toggleSidebar() {
     this.toggleSidebarForMe.emit();
   }
+
+  cerrarSesion(){
+    localStorage.removeItem('access_token');
+    this.router.navigate(['/login']);
+  }
 }
