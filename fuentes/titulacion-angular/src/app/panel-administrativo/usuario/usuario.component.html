@@ -9,39 +9,42 @@
             <tr>
               <th>Usuario</th>
               <th>Contraseña</th>
-              <th>Activo</th>
-              
-              <th>prueba</th>
+              <th>Activo</th>              
               <th>Opciones</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let usuario of data">
+            <tr *ngFor="let usuario of ListUsuario; index as i" [usuarioDelista]="usuario" [indice]="i">
               <td>{{usuario.correo}}</td>
               <td>{{usuario.clave}}</td>
 
               <td>
                 <div class="container">
                   <label class="switch">
-                    <input type="checkbox" class="input checkbox-column" [(ngModel)]="usuario.activo" name="chkActivo" >
+                    <input type="checkbox" class="input checkbox-column" [(ngModel)]="usuario.activo" name="chkActivo">
                     <div class="rail">
                       <span class="circle"></span>
                     </div>
                   </label>
                 </div>
-              </td>
-              
-              <td><input type="checkbox" class="input" name="myChk" [(ngModel)]="isChk" (click)="prueba()"></td>
+              </td>              
               <td>
-                <div>
-                  <ul class="action-list">
-                    <li>Actualizar</li>
-                    <li>Cambiar estado</li>
-                  </ul>
+                <div class="dropdown" (click)="toggleDropdown($event, i)" (mouseleave)="hideDropdown(i)">
+                  <div class="card-button" [class.dropped]="closedStatus[i]==false">
+                    <mat-icon>settings</mat-icon> </div>
+                  <div class="drop-content square-top shrink" [class.show]="closedStatus[i]==false">
+                    <div class="drop-content-section actions">
+                      <ul class="action-list">
+                        <li  [routerLink]="['../../principal/userEdit',i]"><mat-icon>manage_accounts</mat-icon>&nbsp;Modificar</li>
+                        <li><mat-icon>toggle_on</mat-icon>&nbsp;Desactivar</li> 
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+              </td>
             </tr>
           </tbody>
-        </table>
+        </table>        
       </div>
     </div>
   </div>

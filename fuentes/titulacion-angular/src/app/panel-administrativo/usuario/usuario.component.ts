@@ -4,6 +4,9 @@ import { Usuario } from 'src/app/modelos/usuario.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 //import { DataTableDirective } from 'angular-datatables/src/angular-datatables.directive';
 import { DataTableDirective } from 'angular-datatables';
+import { Router } from '@angular/router';
+import { LoginDataService } from 'src/app/servicios/login-data.service';
+
 
 @Component({
   selector: 'app-usuario',
@@ -14,18 +17,19 @@ export class UsuarioComponent implements OnInit {
   //dtOptions: DataTables.Settings = {};
   dtOptions: any = {};
   dtTrigger: Subject<any> = new Subject<any>();
-  data: any;
+  ListUsuario: any;
   @Input() listaAlumnos!: Usuario;
   @ViewChild(DataTableDirective)
   datatableElement: DataTableDirective;
   showTable: boolean = false;
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient,private router: Router, private loginDataService:LoginDataService) { }
 
   isCheckedActivo:boolean;
+  dropdownVisible = false;
 
-  ngOnInit(): void {
-
-    this.dtOptions = {
+  ngOnInit(): void {    
+      this.dtOptions = {
       tableId:"tableId",
       scrollY: "530px",
       //myChkValue: this.isChk,
@@ -68,10 +72,25 @@ export class UsuarioComponent implements OnInit {
       .subscribe((rpst: any) => {
         console.log(rpst)
 
-        this.data = rpst;
+        this.ListUsuario = rpst;
         this.dtTrigger.next(rpst.dtOptions);
         this.showTable = true;
       });
+      //this.listarUsuarios();
+      
+
+      
+  }
+
+  listarUsuarios(){
+    let rspt: any = this.loginDataService.listar();
+    console.log("MIGUEL ANTES TABLA")
+    console.log(rspt)
+
+    this.ListUsuario = rspt;
+    this.dtTrigger.next(rspt.dtOptions);
+    this.showTable = true;
+    
   }
 
   isChk: boolean = false;
@@ -109,4 +128,30 @@ export class UsuarioComponent implements OnInit {
     });
   }
 
+  closedStatus: Array<boolean> = [];
+  accionOpcion: number;
+  toggleDropdown(event: Event, i) {
+    event.stopPropagation();
+    this.accionOpcion = i;
+    console.log("MIGUEL" + i);
+    console.log(this.closedStatus);
+    let current = this.closedStatus[i];
+    this.closedStatus.fill(true)
+
+    if ( current == undefined ) {
+      current = true
+    }
+
+      this.closedStatus[i] = current;
+      this.closedStatus[i]=!this.closedStatus[i]
+  }
+
+  hideDropdown(index: number) {
+    this.closedStatus[index] = true;
+  }
+
+  prueba2(i){
+    console.log("ACTIVADO"+i)
+    this.router.navigate(['principal/userEdit', i]);
+  }
 }

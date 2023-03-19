@@ -1,0 +1,55 @@
+<div class="container-fluid page cuerpo">
+    <div class="d-flex page__box p-3 mt-2">Editar Usuario</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+            <form class="centered-content" [formGroup]="usuarioForm" (ngSubmit)="guardar()">
+
+                <div class="input-container disabled">
+                    <input type="text" 
+                            formControlName="usuario"
+                            id="usuario"
+                            class="form-control"
+                            placeholder=" "  maxlength="12" 
+                            (keydown)="$event.preventDefault()" 
+                            (keypress)="$event.preventDefault()"
+                            (change)="$event.preventDefault()"/>
+                    <label for="usuario"><span class="red">*</span> Usuario</label>
+                </div>
+                
+                <div class="input-container">
+                    <input type="text"
+                            formControlName="clave"
+                            id="clave"
+                            class="form-control"  
+                            placeholder=" "
+                            />
+                    <label for="clave"><span class="red">*</span> Contraseña</label>
+                </div>
+
+                <div class="input-container disabled">
+                    <input type="text" 
+                            formControlName="estado"
+                            id="estado"
+                            class="form-control"
+                            placeholder=""  maxlength="12" 
+                            (keydown)="$event.preventDefault()" 
+                            (keypress)="$event.preventDefault()"
+                            (change)="$event.preventDefault()"/>
+                    <label for="estado"><span class="red">*</span> Estado </label>
+                </div>
+
+                <div class="card-footer">                    
+                    <button type="submit btn-rounded m-r-10" 
+                        class="btn btn-success">
+                        <i class="ti-check"></i> Actualizar Usuario
+                    </button>
+                    <button type="button"
+                        class="btn btn-danger btn-rounded m-r-10" 
+                        >
+                    <i class="ti-close"></i> Cancelar
+                    </button> 
+                </div> 
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,649 @@
+.top-bar .dropdown .drop-content {
+    top: 100%;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+    margin-top: 10px;
+    left: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.top-bar .profile.dropdown .drop-content {
+    right: 0;
+    left: unset;
+    margin-top: 0;
+}
+
+.top-bar .dropdown .drop-content .company-name {
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+.top-bar .dropdown .drop-content .company-role {
+    display: block;
+}
+.top-bar .dropdown {
+    margin-left: 20px;
+}
+
+.dropdown.company {
+    font-size: .9rem;
+    padding-right: 40px;
+    margin-left: 0;
+}
+
+.input-container .multiselect-dropdown .dropdown-btn {
+    padding: 13px 20px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    display: block !important;
+    font-size: .95rem !important;
+    min-height: 50px !important;
+    border: 1px solid #ddd !important;
+}
+
+.input-container.disabled .multiselect-dropdown {
+    background: #eee;
+}
+
+.input-container .multiselect-dropdown .dropdown-btn .selected-item {
+    float: none !important;
+    display: inline-block !important;
+    border: 1px solid #2d94c0 !important;
+    background: #2d94c0 !important;
+    margin-bottom: 1px !important;
+}
+
+.dropdown-list {
+    padding: 6px !important;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.2);
+    border: none !important;
+    border-radius: 10px;
+}
+
+span.dropdown-btn:focus {
+    outline: none;
+}
+
+.input-container.error input,
+.input-container.error select,
+.input-container.error textarea,
+.input-container.error .multiselect-dropdown .dropdown-btn,
+.input-container.error .autocomplete-container {
+    border-color: #fc4b6c;
+}
+
+.input-container.error .multiselect-dropdown .dropdown-btn {
+    border-color: #fc4b6c !important;
+}
+
+.input-container input:focus ~ label, 
+.input-container textarea:focus ~ label, 
+.input-container:not(.unrequired) ng-multiselect-dropdown.ng-valid ~ label,
+.input-container.unrequired ng-multiselect-dropdown ~ label.top,
+.input-container ng-autocomplete.ng-valid ~ label {
+    top: 0;
+    font-size: .8rem;
+    color: #2d94c0;
+    padding: 0 5px;
+    left: 10px;
+    z-index: 99;
+}
+
+.input-container input:not(:placeholder-shown) ~ label,
+.input-container .ng-valid ~ label,
+.input-container ng-multiselect-dropdown.ng-valid ~ label,
+.input-container ng-autocomplete.ng-valid ~ label {
+    color: #888;
+}
+
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    height: unset;
+}
+
+#toolbarViewer .dropdownToolbarButton {
+    width: 138px;
+    max-width: 138px !important;
+}
+
+.mega-container .filter-dropdown ul li:hover, .mega-container ul li.active {
+    background: rgba(84, 174, 218, 0.4);
+}
+
+.filter-dropdown {
+    position: absolute;
+    background: white;
+    padding: 10px 0;
+    z-index: 99;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .3);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.filter-dropdown .title, .filter-input .title {
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: #2d94c0;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.multiselect-dropdown .dropdown-btn {
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+.modal form .dropdown-list ul {
+    max-height: 160px !important;
+}
+
+.multiselect-dropdown .dropdown-btn::-webkit-scrollbar {
+    width: 5px;
+}
+.multiselect-dropdown .dropdown-btn::-webkit-scrollbar-track {
+    background: #f5f5f5; 
+}
+.multiselect-dropdown .dropdown-btn::-webkit-scrollbar-thumb {
+    background-color: #2d94c0;
+}
+
+.card-button + .drop-content ul.action-list li .ti-minus {
+    position: relative;
+}
+
+.card-button + .drop-content ul.action-list li .ti-minus::after,
+table .ti-minus::after,
+table .ti-plus::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: 1px solid #2d94c0;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+}
+
+.card-button + .drop-content ul.action-list li {
+    padding-left: 20px;
+}
+
+table .card-button {
+    border: 1px solid transparent;
+    -webkit-box-pack: center;
+            justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+    background: transparent;
+}
+
+table .card-button:hover {
+    background: transparent;
+}
+
+table .card-button.dropped {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-color: #ccc;
+    border-bottom-color: white;
+}
+
+table .card-button.dropped.top {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid transparent;
+}
+
+table .card-button i {
+    margin: 0;
+}
+
+.card-button {
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    padding: 10px 16px;
+    color: #555;
+    font-size: .9rem;
+    white-space: nowrap;
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex;
+    height: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: transparent;
+    border-radius: 30px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    border: 1px solid #ddd;
+    -webkit-box-pack: center;
+            justify-content: center;
+}
+.card-button:hover {
+    background: #e5f6fa;
+    border-color: #e5f6fa;
+}
+.card-button:hover i {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+.card-button:focus {
+    outline: none;
+}
+.card-button img {
+    width: 15px;
+    margin-left: 10px;
+}
+
+.card-button {
+    -webkit-box-pack: unset;
+            justify-content: unset;
+}
+
+.card-button:hover .target > i {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+.card-button i {
+    display: block;
+    font-size: 1.3rem;
+    -webkit-transition: .3s;
+    transition: .3s;
+    margin-left: 10px;
+    color: #2d94c0;
+}
+
+.card-button.disabled {
+    pointer-events: none;
+    color: #999;
+    background: #f1f1f1;
+}
+
+.card-button.disabled i {
+    color: #999;
+}
+
+.card-button + .drop-content ul.action-list li.disabled .ti-minus::after {
+    border-color: #999;
+}
+
+.card-button.unique {
+    padding: 10px;
+}
+
+.row.legajos .card-button {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+    .row.legajos .card-button {
+        margin-bottom: 0;
+    }
+}
+
+.card-button input {
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 0 10px;
+    min-height: unset;
+    width: unset;
+    transition: .3s;
+}
+.card-button input.hide {
+    width: 0;
+    padding: 0;
+}
+
+.company .drop-content-section.actions {
+    /* height: 350px; */
+    max-height: 350px;
+    overflow: auto;
+}
+
+.company .drop-content-section.actions::-webkit-scrollbar {
+    width: 5px;
+    background: #eee;
+}
+.company .drop-content-section.actions::-webkit-scrollbar-thumb {
+    background: #2d94c0;
+}
+
+.drop-content ul.action-list li {
+    font-size: .9rem;
+    padding-left: 40px;
+}
+
+.card-button + .drop-content ul.action-list li {
+    padding-left: 20px;
+}
+
+table .drop-content {
+    min-width: 250px;
+    margin-top: 0;
+    border-color: #ccc;
+    border-top-left-radius: 10px;
+    margin-bottom: 20px;
+}
+
+table .drop-content:not(.square-top) {
+    margin-top: 10px;
+}
+table .drop-content.top {
+    bottom: 100%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+}
+
+table .drop-content .action-list img {
+    height: 20px;
+}
+
+.drop-content {
+    position: absolute;
+    background: white;
+    color: #444;
+    right: 0;
+    min-width: 250px;
+    border: 1px solid #eee;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 99;
+}
+.opened .drop-content {
+    display: block;
+}
+.drop-content i {
+    margin-right: 10px;
+}
+.drop-content-section {
+    padding: 16px;
+}
+.drop-content-section img {
+    height: 70px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+.drop-content hr {
+    margin: 0;
+}
+.drop-content-section a {
+    display: block;
+    cursor: pointer;
+    font-size: .9rem;
+}
+.drop-content .title {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.drop-content:not(.square-top) {
+    margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, .2);
+    font-size: .9rem;
+}
+.drop-content-section.actions {
+    padding: 0;
+}
+
+.card-button + .drop-content ul.action-list li.disabled .ti-minus::after {
+    border-color: #999;
+}
+
+.drop-content .small-loading.no-bg:after {
+    background: #e5f6fa;
+}
+
+.shrink {
+    visibility: hidden;
+    /* -webkit-transition: .15s; */
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    /* transition: .15s; */
+    -webkit-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+}
+.shrink.top {
+    -webkit-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+}
+.shrink.show {
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+}
+
+/* Remove animations for safari */
+@supports not (-webkit-backdrop-filter: blur(1px)) {
+    .notifications {
+        -webkit-transition: .5s !important;
+        transition: .5s !important;
+        /* visibility: hidden; */
+    }
+    .shrink {
+        -webkit-transition: .15s;
+        transition: .15s;
+        /* visibility: hidden; */
+    }
+    /* .shrink.show {
+        visibility: visible;
+    } */
+    .fade {
+        -webkit-transition: .15s;
+        transition: .15s;
+        /* visibility: hidden; */
+    }
+    /* .fade.show {
+        visibility: visible;
+    } */
+    .slide {
+        -webkit-transition: .15s;
+        transition: .15s;
+        /* visibility: hidden; */
+    }
+    /* .slide.down {
+        visibility: visible;
+    } */
+    .swipe {
+        -webkit-transition: .15s;
+        transition: .15s;
+        /* visibility: hidden; */
+    }
+    /* .swipe.left {
+        visibility: visible;
+    } */
+}
+
+.company .drop-content-section.actions {
+    /* height: 350px; */
+    max-height: 350px;
+    overflow: auto;
+}
+
+.company .drop-content-section.actions::-webkit-scrollbar {
+    width: 5px;
+    background: #eee;
+}
+.company .drop-content-section.actions::-webkit-scrollbar-thumb {
+    background: #2d94c0;
+}
+
+.drop-content-section {
+    padding: 16px;
+}
+.drop-content-section img {
+    height: 70px;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.drop-content-section a {
+    display: block;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.drop-content-section.actions {
+    padding: 0;
+}
+
+table .action-list i.ti-minus,
+table .action-list i.ti-plus {
+    position: relative;
+    font-size: .8rem;
+}
+
+.card-button + .drop-content ul.action-list li .ti-minus::after,
+table .ti-minus::after,
+table .ti-plus::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: 1px solid #2d94c0;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+}
+
+.drop-content ul.action-list li {
+    font-size: .9rem;
+    padding-left: 40px;
+}
+
+table .drop-content .action-list img {
+    height: 20px;
+}
+table .action-list i {
+    font-size: 1rem;
+    margin-right: 10px;
+    display: block;
+}
+
+ul.action-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 15px 0;
+}
+.action-list li {
+    padding: 8px 15px;    
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: flex-start;
+            align-items: flex-start;
+    text-align: left;
+    font-size: 1rem;
+    position: relative;
+}
+.action-list li:hover {
+    background: rgba(6, 35, 200, 0.1);    
+}
+
+/*VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR*/
+
+
+table .action-list i.ti-minus,
+table .action-list i.ti-plus {
+    position: relative;
+    font-size: .8rem;
+}
+
+.card-button + .drop-content ul.action-list li .ti-minus::after,
+table .ti-minus::after,
+table .ti-plus::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    border: 1px solid #2d94c0;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+}
+
+.drop-content ul.action-list li {
+    font-size: .9rem;
+    padding-left: 40px;
+}
+
+.action-list i {
+    font-size: 1rem;
+    color: #2d94c0;
+    display: block;
+    margin-right: 10px;
+    padding-top: 4px;
+}
+.action-list i.ti-plus,
+.action-list i.ti-minus {
+    padding: 0;
+}
+.action-list li.active {
+    color: #aaa;
+    pointer-events: none;
+}
+.action-list img {
+    height: 10px;
+}
+
+.action-list li.disabled {
+    color: #999;
+    pointer-events: none;
+    cursor: unset;
+}
+
+.action-list li.disabled i {
+    color: #999;
+}
+
+.card-button + .drop-content ul.action-list li.disabled .ti-minus::after {
+    border-color: #999;
+}
+
+.small-loading,
+ul.action-list li span.small-loading {
+    font-size: 10px;
+    text-indent: -9999em;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ffffff), color-stop(42%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1s infinite linear;
+    animation: load3 1s infinite linear;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    display: inline-block;
+    padding: 0;
+}
+
+.btn-confirm.btn-load .small-loading, .small-loading.no-bg, ul.action-list li span.small-loading.no-bg {
+    background: -webkit-gradient(linear, left top, right top, color-stop(10%, #2d94c0), color-stop(42%, rgb(45, 148, 192, 0)));
+    background: linear-gradient(to right, #2d94c0 10%, rgb(45, 148, 192, 0) 42%);
+    position: relative;
+}

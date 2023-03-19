@@ -43,6 +43,7 @@ export class LoginDataService {
     );
   }
 
+  usuarios: any;
   listar(){
     const token = localStorage.getItem('access_token');
     const body = new HttpParams()
@@ -50,8 +51,13 @@ export class LoginDataService {
     .set('Authorization', `Bearer ${token}`)
     //.set('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8')
 
-    return this.httpClient.get('api/usuario/listar',{headers}).subscribe(
+    this.httpClient.get('api/usuario/listar',{headers}).subscribe(
+      (rpst: any) => {       
 
+        this.usuarios = rpst;
+      }
     );
+
+    return this.usuarios;
   }
 }

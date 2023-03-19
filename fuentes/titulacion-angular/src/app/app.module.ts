@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +24,7 @@ import { PanelAdministrativoComponent } from './panel-administrativo/panel-admin
 import { UsuarioComponent } from './panel-administrativo/usuario/usuario.component';
 import { DataTablesModule } from "angular-datatables";
 import { MatRadioModule } from '@angular/material/radio';
+import { EditarUsuarioComponent } from './panel-administrativo/usuario/editar-usuario/editar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -33,13 +36,15 @@ import { MatRadioModule } from '@angular/material/radio';
     LoginComponent,
     PruebaComponent,
     PanelAdministrativoComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    EditarUsuarioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     // * MATERIAL IMPORTS
     MatSidenavModule,

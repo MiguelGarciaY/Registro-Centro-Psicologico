@@ -1,0 +1,529 @@
+.input-container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.formulario-generado .input-container {
+    margin-top: 20px;
+}
+
+.input-container .autocomplete-container {
+    padding: 13px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    font-size: .95rem;
+    min-height: 50px;
+    background: transparent;
+    border: 1px solid #ddd;
+}
+.input-container .multiselect-dropdown .dropdown-btn {
+    padding: 13px 20px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    display: block !important;
+    font-size: .95rem !important;
+    min-height: 50px !important;
+    border: 1px solid #ddd !important;
+}
+.input-container.disabled .multiselect-dropdown {
+    background: #eee;
+}
+
+.input-container .multiselect-dropdown .dropdown-btn .selected-item {
+    float: none !important;
+    display: inline-block !important;
+    border: 1px solid #2d94c0 !important;
+    background: #2d94c0 !important;
+    margin-bottom: 1px !important;
+}
+.input-container .multiselect-item-checkbox input[type=checkbox] + div:before {
+    color: #2d94c0 !important;
+    border-color: #2d94c0 !important;
+}
+
+.input-container .multiselect-item-checkbox input[type=checkbox]:checked + div:before {
+    background: #2d94c0 !important;
+}
+
+.input-container.error {
+    margin-bottom: 0;
+}
+.input-container.error input,
+.input-container.error select,
+.input-container.error textarea,
+.input-container.error .multiselect-dropdown .dropdown-btn,
+.input-container.error .autocomplete-container {
+    border-color: #fc4b6c;
+}
+.input-container.error .multiselect-dropdown .dropdown-btn {
+    border-color: #fc4b6c !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #00a1d5;
+    outline: none;
+}
+.input-container label {
+    position: absolute;
+    top: 0;
+    font-size: .8rem;
+    background: white;
+    padding: 0 5px;
+    left: 10px;
+    color: #999;
+    -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+  }
+  .input-container.radio label, .input-container.checkbox label {
+    padding: 0;
+  }
+
+  @supports (display: grid) {
+    .input-container label {
+        color: #888;
+        position: absolute;
+        font-weight: normal;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        left: 24px;
+        text-transform: uppercase;
+        letter-spacing: 0;
+        -webkit-transition: .3s;
+        transition: .3s;
+        margin-bottom: 0;
+        font-size: .9rem;
+        background: white;
+        pointer-events: none;
+    }
+}
+
+.input-container.checkbox label, .input-container.radio label {
+    color: unset;
+    position: static;
+    text-transform: none;
+    background: transparent;
+    pointer-events: all;
+    white-space: nowrap;
+    display: inline-block;
+}
+.input-container.disabled.checkbox {
+    pointer-events: none;
+}
+table.dataTable .input-container.checkbox label, table.dataTable .input-container.radio label {
+    display: inline;
+}
+
+.input-container input:not(:placeholder-shown) ~ label,
+.input-container textarea:not(:placeholder-shown) ~ label {
+    top: 0;
+    font-size: .8rem;
+    color: #2d94c0;
+    padding: 0 5px;
+    left: 10px;
+    z-index: 99;
+}
+
+.timeout .input-container input:not(:placeholder-shown) ~ label, 
+.timeout .input-container input:focus ~ label, 
+.timeout .input-container textarea:not(:placeholder-shown) ~ label {
+    font-size: .7rem;
+}
+
+.input-container input:focus ~ label, 
+.input-container textarea:focus ~ label, 
+.input-container:not(.unrequired) ng-multiselect-dropdown.ng-valid ~ label,
+.input-container.unrequired ng-multiselect-dropdown ~ label.top,
+.input-container ng-autocomplete.ng-valid ~ label {
+    top: 0;
+    font-size: .8rem;
+    color: #2d94c0;
+    padding: 0 5px;
+    left: 10px;
+    z-index: 99;
+}
+.input-container input:-webkit-autofill ~ label {
+    top: 0;
+    font-size: .8rem;
+    color: #2d94c0;
+    padding: 0 5px;
+    left: 10px;
+}
+.input-container input:not(:placeholder-shown) ~ label,
+.input-container .ng-valid ~ label,
+.input-container ng-multiselect-dropdown.ng-valid ~ label,
+.input-container ng-autocomplete.ng-valid ~ label {
+    color: #888;
+}
+.input-container label.top {
+    top: 0;
+    font-size: .8rem;
+    background: white;
+    padding: 0 5px;
+    left: 10px;
+    z-index: 999;
+}
+
+.input-container.checkbox.disabled label {
+    cursor: auto;
+    color: #bbb;
+}
+
+.input-container.error.checkbox label span, .input-container.error.radio label span {
+    border-color: #fc4b6c;
+}
+
+.input-container.disabled.checkbox label span{
+    border: 2px solid #bbb;
+}
+
+form.sign-in .input-container input:-webkit-autofill {
+    border-color: #00a1d5 !important;
+}
+.input-container.radio label:not(:last-of-type) {
+    margin-right: 20px;
+}
+.input-container.checkbox label:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+table .input-container {
+    margin-bottom: 0;
+}
+table .popover .input-container {
+    display: inline-block;
+}
+table thead .input-container.checkbox label span {
+    border-color: white;
+}
+
+@supports (-webkit-backdrop-filter: blur(1px)) {
+    input, select, textarea, .input-container .autocomplete-container {
+        height: 50px;
+    }
+}
+
+.pdf-actions .input-container {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.input-container .autocomplete-container .not-found div {
+    border-bottom: none;
+}
+.input-container .autocomplete-container {
+    box-shadow: none;
+    min-height: 50px;
+    padding: 0;
+}
+.input-container .autocomplete-container .input-container input {
+    background: transparent;
+    padding: 13px 20px;
+    text-transform: uppercase;
+}
+.input-container .autocomplete-container .input-container .x i {
+    vertical-align: initial;
+}
+.input-container .autocomplete-container .suggestions-container .complete-selected, 
+.input-container .autocomplete-container .suggestions-container ul li:hover {
+    background-color: rgba(84, 174, 218, 0.2);
+}
+
+.input-container.switch label {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    left: unset;
+    top: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    background: transparent;
+}
+.input-container.switch label span {
+    height: 18px;
+    width: 36px;
+    background: #ccc;
+    display: inline-block;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    pointer-events: auto;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.input-container.switch input {
+    display: none;
+}
+.input-container.switch span span {
+    display: inline-block;
+    background: white;
+    height: 13px;
+    width: 13px;
+    position: absolute;
+    left: 3px;
+    border-radius: 50%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.input-container.switch input:checked ~ span {
+    background: #2d94c0;
+}
+.input-container.switch input:checked ~ span span {
+    -webkit-transform: translate(17px, -50%);
+            transform: translate(17px, -50%);
+}
+
+.input-container.disabled input,
+.input-container.disabled textarea {
+    background: #f5f5f5;
+    border-color: #f5f5f5 !important;
+    color: #777;
+}
+
+.input-container.disabled .autocomplete-container {
+    background: #f5f5f5;
+    cursor: auto;
+    pointer-events: none;
+    border-color: #f5f5f5;
+}
+
+.input-container.disabled label {
+    background: transparent;
+}
+
+.input-container.disabled select {
+    background: #f5f5f5;
+    border-color: #f5f5f5 !important;
+    color: #777;
+    pointer-events: none;
+}
+
+.input-container.disabled select + label{
+    background: transparent;
+}
+.input-container.disabled[_ngcontent-c1] input[_ngcontent-c1]:not(:placeholder-shown) + label[_ngcontent-c1],
+.input-container.disabled input:not(:placeholder-shown) + label,
+.input-container.disabled textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    color: #777;
+    padding: 0;
+    left: 0;
+}
+
+.input-container.listed.disabled textarea {
+    background: transparent;
+}
+.input-container.listed.disabled textarea + label {
+    display: none;
+}
+.input-container.listed.disabled {
+    margin-top: 0;
+}
+
+.right .input-container.disabled {
+    margin-top: 30px;
+}
+
+.input-container.line {
+    margin: 0 5px;
+}
+.input-container.line input, .input-container.line select {
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-width: 2px;
+    padding: 7px 0;
+    min-height: unset;
+}
+.input-container.line label {
+    padding-left: 0;
+    left: 0;
+    font-size: .7rem;
+}
+
+.input-container.line input:focus ~ label, .input-container.line ng-autocomplete.ng-valid ~ label {
+    padding: 0;
+    left: 0;
+}
+.input-container.line input:not(:placeholder-shown) ~ label {
+    left: 0;
+    padding: 0;
+}
+.input-container.line.d-inline-block {
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+.input-container.line.d-inline-block input {
+    padding: 5px 0;
+    padding-top: 0;
+    margin-bottom: 2px;
+}
+.input-container.line.d-inline-block input[type=number] {
+    min-width: unset;
+    width: 100px;
+    padding: 5px 0;
+    margin-bottom: 2px;
+}
+.input-container.line.d-inline-block select {
+    padding: 5px 0;
+    margin-bottom: 2px;
+}
+.input-container.line.d-inline-block input[disabled] {
+    background: #eee;
+    text-align: center;
+}
+.input-container.dashed input {
+    padding: 10px 15px;
+    min-height: unset;
+    border: 1px dashed #ccc;
+    margin-right: 10px;
+}
+
+@media (min-width: 562px) {
+    .input-container.line input, .input-container.line select {
+        padding: 10px 0;
+    }
+    .input-container.line input + label {
+        font-size: .9rem;
+    }
+    .timeout-count {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    .timeout-count i {
+        font-size: 1.2rem;
+    }
+    .timeout .line-btn {
+        padding: 12px 15px;
+    }
+    .input-container.line {
+        margin: 0 5px;
+    }
+    .timeout .line-btn i {
+        display: inline-block;
+    }
+}
+
+.formulario-generado .input-container.radio, .formulario-generado .input-container.checkbox {
+    border-radius: 3px;
+    padding: 5px 10px;
+    background: #f7f7f7;
+}
+
+.modal-body .input-container {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.input-container.disabled.radio label,
+.input-container.disabled.checkbox label {
+    color: #999;
+}
+
+.mega-container .autocomplete-container .input-container input {
+    border: 1px solid #ddd;
+}
+
+.input-container.dashed {
+    margin-bottom: 0;
+}
+
+.type-doc-list li .input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input-container.auto-complete {
+    z-index: 9999;
+}
+
+.hour-row .input-container:first-child {
+    width: 100%;
+    margin-right: 10px;
+}
+.hour-row .input-container:nth-child(2) {
+    width: 150px;
+}
+
+.formulario-generado .input-container.checkbox label, 
+.formulario-generado .input-container.radio label {
+    white-space: normal;
+    display: inline-block;
+    transform: none;
+}
+
+.input-container.checkbox.lista-checkbox {
+    background: transparent;
+    padding: 0;
+}
+
+.input-container.checkbox.lista-checkbox label {
+    display: block;
+}
+
+select option:disabled {
+    color: #aaa;
+}
+
+.card-footer {
+    margin-top: 40px;
+}
+.card-footer .btn {
+    display: block;
+    margin: 0 auto;
+}
+.card-footer .btn:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+@media (min-width: 576px) {
+    .card-footer .btn:not(:last-of-type) {
+        margin: unset;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+    .card-footer .btn {
+        display: inline-block;
+    }
+}
+
+form button.btn,
+.card-footer button.btn {
+    min-width: 180px;
+    display: inline-block;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.card-footer button.btn.btn-load {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-width: 180px;
+    pointer-events: none;
+}
+
+
+.btn-success, .btn-success.disabled {
+    background: #3980F1;
+    border: 1px solid #3980F1;
+    -webkit-transition: 0.2s ease-in;
+    transition: 0.2s ease-in;
+}
+.btn-success:hover, .btn-success.disabled:hover {
+    background: #3980F1;
+    box-shadow: 0 14px 26px -12px rgba(84, 174, 218, 0.8), 0 4px 23px 0 rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(84, 174, 218, 0.4);
+    border: 1px solid #3980F1;
+}
+
+.card-footer{
+    background-color: #ffffff;
+    border-top: none;
+}
